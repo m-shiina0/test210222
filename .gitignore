@@ -1,0 +1,55 @@
+#######################################################################################
+### [ Flex Design Powers .gitignore WordPressFormat Ver.1.1 ] 2020/06/17
+#######################################################################################
+
+# 本ファイル .gitignore は Git の管理に含めないファイルやフォルダを指定します。
+
+# Windows系ファイルを除外（状況に応じて書き換えてください）
+Thumbs.db
+
+# Dreamweaverで生成されるファイルを除外（状況に応じて書き換えてください）
+dwsync.xml
+*.mno
+
+# Codekitで生成されるファイルを除外（状況に応じて書き換えてください）
+config.codekit3
+
+# Sassのキャッシュフォルダを除外（状況に応じて書き換えてください）
+.sass-cache
+
+# Visual Studio Codeの設定フォルダを除外（状況に応じて書き換えてください）
+.vscode
+
+# 動画系ファイルを除外（状況に応じて書き換えてください）
+*.avi
+*.mov
+*.wmv
+*.flv
+*.mpg
+*.mp3
+# *.mp4
+
+# Wordpress関連を除外（状況に応じて書き換えてください）
+wp-includes/
+wp-admin/
+# wordpress/index.php
+wordpress/license.txt
+wordpress/readme.html
+wordpress/wp-activate.php
+wordpress/wp-blog-header.php
+wordpress/wp-comments-post.php
+wordpress/wp-config-sample.php
+# wordpress/wp-config.php
+wordpress/wp-cron.php
+wordpress/wp-links-opml.php
+wordpress/wp-load.php
+wordpress/wp-login.php
+wordpress/wp-mail.php
+wordpress/wp-settings.php
+wordpress/wp-signup.php
+wordpress/wp-trackback.php
+wordpress/xmlrpc.php
+wordpress/wp-content/languages/
+wordpress/wp-content/plugins/
+wordpress/wp-content/uploads/
+

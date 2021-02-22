@@ -1,0 +1,116 @@
+	<!-- favicon -->
+	<link rel="icon" href="resource/image/favicon.ico">
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Slick -->
+	<link rel="stylesheet" type="text/css" href="resource/slick/slick.css"/>
+	<script type="text/javascript" src="resource/slick/slick.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="resource/slick/slick-theme.css">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="resource/css/reset.css">
+	<link rel="stylesheet" href="resource/css/style.css">
+	
+	<!-- Slick -->
+	<script>
+		$(document).ready(function(){
+			var slick = $('.slick').slick({
+				autoplay: true,
+				autoplaySpeed:5000,
+				dots: true,
+				dotsClass: 'slick-dots',
+				draggable: false,
+				pauseOnHover: false,
+				centerMode: true,
+			});
+		});
+	</script>
+	
+	<!-- Fonts -->
+	<script type="text/javascript"src="//code.typesquare.com/static/ZDbTe4IzCko%253D/ts106f.js"charset="utf-8"></script>
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'tzq4jel',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>	
+	
+	<!-- ToTop -->
+	<script>
+		$(function() {
+		    var showFlag = false;
+		    var topBtn = $('#page-top');    
+		    topBtn.css('bottom', '-100px');
+		    var showFlag = false;
+		    //スクロールが100に達したらボタン表示
+		    $(window).scroll(function () {
+		        if ($(this).scrollTop() > 100) {
+		            if (showFlag == false) {
+		                showFlag = true;
+		                topBtn.stop().animate({'bottom' : '20px'}, 200); 
+		            }
+		        } else {
+		            if (showFlag) {
+		                showFlag = false;
+		                topBtn.stop().animate({'bottom' : '-100px'}, 200); 
+		            }
+		        }
+		    });
+		    //スクロールしてトップ
+		    topBtn.click(function () {
+		        $('body,html').animate({
+		            scrollTop: 0
+		        }, 500);
+		        return false;
+		    });
+		});
+	</script>
+
+	<script>
+		$(function($) {
+		WindowHeight = $(window).height();
+		$('.drawr').css('height', WindowHeight); //メニューをwindowの高さいっぱいにする
+		
+		$(document).ready(function() {
+			$('.btn').click(function(){ //クリックしたら
+		if($('.drawr').is(":animated")){
+			return false;
+		}else{
+			$('.drawr').animate({width:'toggle'}); //animateで表示・非表示
+			$('body').toggleClass('open'); //toggleでクラス追加・削除
+			return false;
+		}
+			});
+		});
+	//別領域をクリックでメニューを閉じる
+	$(document).click(function(event) {
+		if (!$(event.target).closest('.drawr').length) {
+			$('body').removeClass('open');
+		$('.drawr').hide();
+		}
+	});
+	
+	});
+	</script>
+	
+	<!-- header -->
+	<script>
+		(function($) {
+		    $(function() {
+		        var $header = $('#top-head');
+		        $(window).scroll(function() {
+		            if ($(window).scrollTop() > 50) {
+		                $header.addClass('fixed');
+		            } else {
+		                $header.removeClass('fixed');
+		            }
+		        });
+		    });
+		})(jQuery);
+	</script>
